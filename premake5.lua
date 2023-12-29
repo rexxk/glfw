@@ -23,6 +23,10 @@ project "glfw"
         "src/platform.c",
         "src/vulkan.c",
         "src/window.c",
+        "src/null_init.c",
+        "src/null_joystick.c",
+        "src/null_monitor.c",
+        "src/null_window.c",
     }
 
     filter "system:linux"
@@ -30,10 +34,6 @@ project "glfw"
 
         files
         {
-            "src/null_init.c",
-            "src/null_joystick.c",
-            "src/null_monitor.c",
-            "src/null_window.c",
             "src/x11_init.c",
             "src/x11_monitor.c",
             "src/x11_window.c",
@@ -65,7 +65,11 @@ project "glfw"
             "src/osmesa_context.c",
         }
 
-        defines "_GLFW_WIN32"
+        defines
+        {
+            "_GLFW_WIN32",
+            "_CRT_SECURE_NO_WARNINGS",
+        }
 
     filter { "configurations:Debug" }
         defines "DEBUG"
