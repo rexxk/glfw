@@ -56,6 +56,7 @@ project "glfw"
         {
             "src/win32_init.c",
             "src/win32_joystick.c",
+            "src/win32_module.c",
             "src/win32_monitor.c",
             "src/win32_time.c",
             "src/win32_thread.c",
