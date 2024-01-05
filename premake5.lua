@@ -27,6 +27,8 @@ project "glfw"
         "src/null_joystick.c",
         "src/null_monitor.c",
         "src/null_window.c",
+        "src/egl_context.c",
+        "src/osmesa_context.c",
     }
 
     filter "system:linux"
@@ -43,8 +45,6 @@ project "glfw"
             "src/posix_time.c",
             "src/posix_thread.c",
             "src/glx_context.c",
-            "src/egl_context.c",
-            "src/osmesa_context.c",
             "src/linux_joystick.c",
         }
 
@@ -62,8 +62,6 @@ project "glfw"
             "src/win32_thread.c",
             "src/win32_window.c",
             "src/wgl_context.c",
-            "src/egl_context.c",
-            "src/osmesa_context.c",
         }
 
         defines
